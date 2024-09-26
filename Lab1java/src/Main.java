@@ -3,9 +3,6 @@ import java.util.Random;
 
 public class Main {
 
-
-    private static final int rghtborder = 1_000_000;
-
     // первое вычисления массива
     private static double calc1(double x) {
         double temp1 = Math.tan(Math.tan(Math.asin(x * Math.E + 1)));
