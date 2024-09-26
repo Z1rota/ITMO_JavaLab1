@@ -5,7 +5,7 @@ public class Main {
 
 
 
-    static final int rghtborder = 1_000_000;
+    private static final int rghtborder = 1_000_000;
 
     // первое вычисления массива
     private static double calc1(double x) {
@@ -15,7 +15,7 @@ public class Main {
     }
 
     // Второе вычисление с массивом
-    private static double calc2(double x) {
+    private static double calc2 (double x) {
         double temp1 = ((2 / 3 - Math.asin(Math.sin(x))) / Math.pow((Math.pow((1 / 2 / (x + 2)), 2) / 2), 3));
         double temp2 = Math.pow(Math.cos(Math.pow(Math.PI * x, x)), temp1);
         return temp2;
@@ -66,10 +66,18 @@ public class Main {
         return (rnd.nextFloat(-5.0f*rghtborder, 5.0f*rghtborder+1))/rghtborder;
     }
 
-    public static void main(String[] args) {
-        double[] x = new double[10]; // Создаем массив X
 
-        int[] z = new int[]{6, 8, 10, 12, 14, 16, 18, 20, 22}; // создаем массив z
+    public static void main(String[] args) {
+        // Создаем массив X
+        double[] x = new double[10];
+
+         // создаем массив z
+        int[] z = new int[9];
+        for(int i = 6,j = 0; i <= 22;i+=2,j++ ){
+            z[j] = i;
+
+        }
+        
 
         for (int i = 0; i < x.length; i++) { // заполняем данные в массив x
             x[i] = genRandom();
