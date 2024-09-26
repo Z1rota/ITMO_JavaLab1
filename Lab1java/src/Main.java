@@ -4,7 +4,6 @@ import java.util.Random;
 public class Main {
 
 
-
     private static final int rghtborder = 1_000_000;
 
     // первое вычисления массива
@@ -62,8 +61,8 @@ public class Main {
      // Генерация Рандомных значений для массива x
     public static double genRandom() {
         Random rnd = new Random();
-
-        return (rnd.nextFloat(-5.0f*rghtborder, 5.0f*rghtborder+1))/rghtborder;
+        double b = 5.0f;
+        return (rnd.nextDouble(-5.0f, 5.0f+Math.nextUp(b)));
     }
 
 
@@ -77,7 +76,7 @@ public class Main {
             z[j] = i;
 
         }
-        
+
 
         for (int i = 0; i < x.length; i++) { // заполняем данные в массив x
             x[i] = genRandom();
