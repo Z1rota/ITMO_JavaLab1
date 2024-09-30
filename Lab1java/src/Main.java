@@ -58,7 +58,7 @@ public class Main {
      // Генерация Рандомных значений для массива x
     public static double genRandom() {
         Random rnd = new Random();
-        double b = 5.0f;
+        double b = 0.0f;
         return (rnd.nextDouble(-5.0f, 5.0f+Math.nextUp(b)));
     }
 
